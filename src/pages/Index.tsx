@@ -18,7 +18,23 @@ const IndexContent: React.FC = () => {
   }, [selectedCharacter]);
 
   return (
-    <div className="min-h-screen">
+    <div 
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: !selectedCharacter ? `url(${import.meta.env.BASE_URL}lovable-uploads/30a58018-bcb5-4eef-9456-61020c703a8d.png)` : undefined,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Background overlay for initial load */}
+      {!selectedCharacter && (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/40 via-purple-900/40 to-blue-900/40" />
+          <div className="absolute inset-0 bg-black bg-opacity-40" />
+        </>
+      )}
+      
       <CharacterSelector 
         open={showCharacterSelector} 
         onOpenChange={setShowCharacterSelector} 
