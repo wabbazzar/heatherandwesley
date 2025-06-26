@@ -51,22 +51,22 @@ const characterContent = {
 // Character-specific background images for each RSVP step
 const characterBackgrounds = {
   wesley: {
-    initial: `${import.meta.env.BASE_URL}lovable-uploads/wesley1.png`,
-    diet: `${import.meta.env.BASE_URL}lovable-uploads/wesley2.png`,
-    song: `${import.meta.env.BASE_URL}lovable-uploads/wesley3.png`,
-    message: `${import.meta.env.BASE_URL}lovable-uploads/wesley4.png`
+    initial: '/lovable-uploads/wesley1.png',
+    diet: '/lovable-uploads/wesley2.png',
+    song: '/lovable-uploads/wesley3.png',
+    message: '/lovable-uploads/wesley4.png'
   },
   heather: {
-    initial: `${import.meta.env.BASE_URL}lovable-uploads/heather1.png`,
-    diet: `${import.meta.env.BASE_URL}lovable-uploads/heather2.png`,
-    song: `${import.meta.env.BASE_URL}lovable-uploads/heather3.png`,
-    message: `${import.meta.env.BASE_URL}lovable-uploads/heather4.png`
+    initial: '/lovable-uploads/heather1.png',
+    diet: '/lovable-uploads/heather2.png',
+    song: '/lovable-uploads/heather3.png',
+    message: '/lovable-uploads/heather4.png'
   },
   puffy: {
-    initial: `${import.meta.env.BASE_URL}lovable-uploads/puffy1.png`, // TODO: Add when image is provided
-    diet: `${import.meta.env.BASE_URL}lovable-uploads/puffy2.png`,
-    song: `${import.meta.env.BASE_URL}lovable-uploads/puffy3.png`,
-    message: `${import.meta.env.BASE_URL}lovable-uploads/puffy4.png`
+    initial: '/lovable-uploads/puffy1.png', // TODO: Add when image is provided
+    diet: '/lovable-uploads/puffy2.png',
+    song: '/lovable-uploads/puffy3.png',
+    message: '/lovable-uploads/puffy4.png'
   }
 };
 
