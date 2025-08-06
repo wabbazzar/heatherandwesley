@@ -1,6 +1,6 @@
 # DynamoDB Table Schemas
 
-*Generated on: 2025-08-06 22:22:14 UTC*
+*Generated on: 2025-08-06 22:35:51 UTC*
 
 ## Overview
 
