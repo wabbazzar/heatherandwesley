@@ -4,7 +4,7 @@
 
 This document describes the API endpoints for the Wedding App RSVP system.
 
-Generated on: 2025-07-31T18:31:12.767636Z
+Generated on: 2025-08-10T03:29:42.781889Z
 
 ## Lambda Function Details
 

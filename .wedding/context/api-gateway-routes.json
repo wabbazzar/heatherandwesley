@@ -1,20 +1,38 @@
 {
   "api_name": "heatherandwesley-api",
-  "api_id": "m1wocluixd",
+  "api_id": "4q7jj56io8",
   "api_type": "REST",
-  "created_date": "2025-07-30T17:02:43-05:00",
-  "description": "API Gateway for wedding RSVP submissions",
+  "created_date": "2025-08-03T03:22:59+00:00",
+  "description": "Wedding App API including leaderboard endpoints",
   "endpoint_configuration": {
     "types": [
-      "REGIONAL"
-    ]
+      "EDGE"
+    ],
+    "ipAddressType": "ipv4"
   },
   "routes": [
     {
-      "route_key": "OPTIONS /rsvp",
-      "path": "/rsvp",
+      "route_key": "GET /leaderboard/{game}",
+      "path": "/leaderboard/{game}",
+      "http_method": "GET",
+      "resource_id": "womorm",
+      "authorization_type": "NONE",
+      "api_key_required": false,
+      "integration": {
+        "type": "AWS_PROXY",
+        "http_method": "POST",
+        "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:037195638157:function:heatherandwesley-leaderboard-handler/invocations",
+        "connection_type": null,
+        "content_handling": null,
+        "lambda_arn": "arn:aws:lambda:us-east-1:037195638157:function:heatherandwesley-leaderboard-handler",
+        "lambda_function_name": "heatherandwesley-leaderboard-handler"
+      }
+    },
+    {
+      "route_key": "OPTIONS /leaderboard/{game}",
+      "path": "/leaderboard/{game}",
       "http_method": "OPTIONS",
-      "resource_id": "5u54gv",
+      "resource_id": "womorm",
       "authorization_type": "NONE",
       "api_key_required": false,
       "integration": {
@@ -26,57 +44,40 @@
       }
     },
     {
-      "route_key": "POST /rsvp",
-      "path": "/rsvp",
+      "route_key": "POST /leaderboard/{game}",
+      "path": "/leaderboard/{game}",
       "http_method": "POST",
-      "resource_id": "5u54gv",
+      "resource_id": "womorm",
       "authorization_type": "NONE",
       "api_key_required": false,
       "integration": {
         "type": "AWS_PROXY",
         "http_method": "POST",
-        "uri": "arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:037195638157:function:heatherandwesley-rsvp-handler/invocations",
+        "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:037195638157:function:heatherandwesley-leaderboard-handler/invocations",
         "connection_type": null,
         "content_handling": null,
-        "lambda_arn": "arn:aws:lambda:us-west-2:037195638157:function:heatherandwesley-rsvp-handler",
-        "lambda_function_name": "heatherandwesley-rsvp-handler"
-      }
-    },
-    {
-      "route_key": "GET /rsvp/{id}",
-      "path": "/rsvp/{id}",
-      "http_method": "GET",
-      "resource_id": "f2pmcy",
-      "authorization_type": "NONE",
-      "api_key_required": false,
-      "integration": {
-        "type": "AWS_PROXY",
-        "http_method": "POST",
-        "uri": "arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:037195638157:function:heatherandwesley-rsvp-handler/invocations",
-        "connection_type": null,
-        "content_handling": null,
-        "lambda_arn": "arn:aws:lambda:us-west-2:037195638157:function:heatherandwesley-rsvp-handler",
-        "lambda_function_name": "heatherandwesley-rsvp-handler"
+        "lambda_arn": "arn:aws:lambda:us-east-1:037195638157:function:heatherandwesley-leaderboard-handler",
+        "lambda_function_name": "heatherandwesley-leaderboard-handler"
       }
     }
   ],
   "deployments": [
     {
-      "id": "57tf13",
-      "created_date": "2025-07-30T17:03:14-05:00",
+      "id": "c7owjj",
+      "created_date": "2025-08-03T03:23:55+00:00",
       "description": ""
     }
   ],
   "stages": [
     {
       "name": "prod",
-      "deployment_id": "57tf13",
-      "invoke_url": "https://m1wocluixd.execute-api.us-west-2.amazonaws.com/prod",
+      "deployment_id": "c7owjj",
+      "invoke_url": "https://4q7jj56io8.execute-api.us-east-1.amazonaws.com/prod",
       "description": "Default stage (inferred)",
       "created_date": null,
       "last_updated_date": null
     }
   ],
-  "extracted_at": "2025-07-31T18:31:09.040752",
+  "extracted_at": "2025-08-10T03:29:40.938251",
   "extractor_version": "1.0.0"
 }

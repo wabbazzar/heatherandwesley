@@ -1,6 +1,6 @@
 {
   "lambda_name": "heatherandwesley-rsvp-handler",
-  "lambda_arn": "arn:aws:lambda:us-west-2:037195638157:function:heatherandwesley-rsvp-handler",
+  "lambda_arn": "arn:aws:lambda:us-east-1:037195638157:function:heatherandwesley-rsvp-handler",
   "runtime": "python3.11",
   "handler": "rsvp-handler.lambda_handler",
   "environment_variables": {
@@ -56,7 +56,7 @@
           "Access-Control-Allow-Headers": "Content-Type",
           "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
         },
-        "body": "{\"message\": \"RSVP submitted successfully\", \"data\": {\"id\": \"195a7e9f-816f-4c66-829e-fd2e077391f0\", \"name\": \"Test Guest\", \"email\": \"test@example.com\", \"phone\": \"+1234567890\", \"attendance\": \"yes\", \"notifications\": true, \"dietary_restrictions\": \"Vegetarian\", \"song_request\": \"Never Gonna Give You Up\", \"message_for_couple\": \"Congratulations on your special day!\", \"created_at\": \"2025-07-31T18:31:11.992103Z\", \"updated_at\": \"2025-07-31T18:31:11.992103Z\"}}"
+        "body": "{\"message\": \"RSVP submitted successfully\", \"data\": {\"id\": \"f9fee994-9dfb-45dd-85ec-e57c65ea2fd9\", \"name\": \"Test Guest\", \"email\": \"test@example.com\", \"phone\": \"+1234567890\", \"attendance\": \"yes\", \"notifications\": true, \"dietary_restrictions\": \"Vegetarian\", \"song_request\": \"Never Gonna Give You Up\", \"message_for_couple\": \"Congratulations on your special day!\", \"created_at\": \"2025-08-10T03:29:42.404493Z\", \"updated_at\": \"2025-08-10T03:29:42.404493Z\"}}"
       }
     },
     {
@@ -108,7 +108,7 @@
           "Access-Control-Allow-Headers": "Content-Type",
           "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
         },
-        "body": "{\"message\": \"RSVP submitted successfully\", \"data\": {\"id\": \"1c29e2a2-ccdc-4426-b779-74892ed23b7c\", \"name\": \"Minimal Guest\", \"email\": \"minimal@example.com\", \"phone\": \"\", \"attendance\": \"no\", \"notifications\": false, \"dietary_restrictions\": \"\", \"song_request\": \"\", \"message_for_couple\": \"\", \"created_at\": \"2025-07-31T18:31:12.307211Z\", \"updated_at\": \"2025-07-31T18:31:12.307211Z\"}}"
+        "body": "{\"message\": \"RSVP submitted successfully\", \"data\": {\"id\": \"088ef1c3-44d8-49e4-bcd5-74f0711a9c32\", \"name\": \"Minimal Guest\", \"email\": \"minimal@example.com\", \"phone\": \"\", \"attendance\": \"no\", \"notifications\": false, \"dietary_restrictions\": \"\", \"song_request\": \"\", \"message_for_couple\": \"\", \"created_at\": \"2025-08-10T03:29:42.577795Z\", \"updated_at\": \"2025-08-10T03:29:42.577795Z\"}}"
       }
     },
     {
@@ -116,13 +116,13 @@
       "description": "GET request with valid RSVP ID",
       "request": {
         "httpMethod": "GET",
-        "path": "/rsvp/195a7e9f-816f-4c66-829e-fd2e077391f0",
+        "path": "/rsvp/f9fee994-9dfb-45dd-85ec-e57c65ea2fd9",
         "headers": {
           "Content-Type": "application/json",
           "User-Agent": "Lambda Pattern Extractor"
         },
         "pathParameters": {
-          "id": "195a7e9f-816f-4c66-829e-fd2e077391f0"
+          "id": "f9fee994-9dfb-45dd-85ec-e57c65ea2fd9"
         },
         "queryStringParameters": {},
         "isBase64Encoded": false,
@@ -136,7 +136,7 @@
           "Access-Control-Allow-Headers": "Content-Type",
           "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
         },
-        "body": "{\"data\": {\"updated_at\": \"2025-07-31T18:31:11.992103Z\", \"created_at\": \"2025-07-31T18:31:11.992103Z\", \"notifications\": true, \"dietary_restrictions\": \"Vegetarian\", \"attendance\": \"yes\", \"song_request\": \"Never Gonna Give You Up\", \"id\": \"195a7e9f-816f-4c66-829e-fd2e077391f0\", \"email\": \"test@example.com\", \"phone\": \"+1234567890\", \"name\": \"Test Guest\", \"message_for_couple\": \"Congratulations on your special day!\"}}"
+        "body": "{\"data\": {\"updated_at\": \"2025-08-10T03:29:42.404493Z\", \"created_at\": \"2025-08-10T03:29:42.404493Z\", \"notifications\": true, \"dietary_restrictions\": \"Vegetarian\", \"attendance\": \"yes\", \"song_request\": \"Never Gonna Give You Up\", \"id\": \"f9fee994-9dfb-45dd-85ec-e57c65ea2fd9\", \"email\": \"test@example.com\", \"phone\": \"+1234567890\", \"name\": \"Test Guest\", \"message_for_couple\": \"Congratulations on your special day!\"}}"
       }
     },
     {
@@ -190,7 +190,7 @@
           "Access-Control-Allow-Headers": "Content-Type",
           "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
         },
-        "body": "{\"error\": \"Missing RSVP ID\"}"
+        "body": "{\"error\": \"Missing RSVP ID or email parameter\"}"
       }
     },
     {
@@ -382,6 +382,6 @@
   "api_integration": {},
   "timeout": 30,
   "memory_size": 256,
-  "extracted_at": "2025-07-31T18:31:12.766334Z",
+  "extracted_at": "2025-08-10T03:29:42.780906Z",
   "extractor_version": "1.0.0"
 }
